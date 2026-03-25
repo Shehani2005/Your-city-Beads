@@ -123,66 +123,11 @@
     </div>
   </footer>
 
-  <!-- PRODUCTS DATA -->
-  <script>
-    const products = {
-      b1: {
-        name: "Black & White Bracelets",
-        category: "Boys",
-        price: 250,
-        mainImg: "Images/products/b1.jpeg",
-        smallImgs: [
-          "Images/products/b1.jpeg",
-          "Images/products/b1.1.jpeg",
-          "Images/products/b1.2.jpeg",
-          "Images/products/b1.3.jpeg"
-        ],
-        description: "These handmade bracelets are designed specially for boys and come in two separate styles: a black bracelet and a white bracelet..."
-      },
-      b9: {
-        name: "Spiral Bracelet",
-        category: "Girls",
-        price: 250,
-        mainImg: "Images/products/b9.jpeg",
-        smallImgs: ["Images/products/b9.jpeg"],
-        description: "Elegant spiral bracelet for girls..."
-      },
-      b4: {
-        name: "Couple Bracelets",
-        category: "Girls & Boys",
-        price: 500,
-        mainImg: "Images/products/b4.jpeg",
-        smallImgs: ["Images/products/b4.jpeg"],
-        description: "Perfect couple bracelet set..."
-      }
-      // Add more products here
-    };
+  
+     
+     
 
-    // Load product based on URL query
-    const params = new URLSearchParams(window.location.search);
-    const productId = params.get("product");
-
-    if (products[productId]) {
-      const product = products[productId];
-      document.getElementById("MainImg").src = product.mainImg;
-      document.getElementById("category").innerText = product.category;
-      document.getElementById("productName").innerText = product.name;
-      document.getElementById("price").innerText = `LKR ${product.price}`;
-      document.getElementById("description").innerText = product.description;
-
-      const smallImgsDiv = document.getElementById("smallImgs");
-      smallImgsDiv.innerHTML = "";
-      product.smallImgs.forEach(imgSrc => {
-        const div = document.createElement("div");
-        div.className = "small-img-col";
-        div.innerHTML = `<img src="${imgSrc}" class="small-img">`;
-        smallImgsDiv.appendChild(div);
-
-        div.querySelector("img").onclick = () => {
-          document.getElementById("MainImg").src = imgSrc;
-        };
-      });
-    } else {
+     
       document.body.innerHTML = "<h2>Product not found!</h2>";
     }
   </script>
