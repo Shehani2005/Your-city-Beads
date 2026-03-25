@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Your City Beads</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <section id="header">
+        <a href="#"><img src="Images/logo.png" class="logo"></a>
+        <div>
+           <ul id="navbar">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="product.html">Products</a></li>
+            <li><a class="active" href="signup.html">Sign up</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+            <li><a href="profile.html"><i class="fa-solid fa-user"></i></a></li>
+           </ul> 
+        </div>
+    </section>
+    <section class="auth-section">
+        <div class="auth-box">
+            <h2>Sign Up</h2>
+            <form id="signupForm">
+                <input type="text" id="name" placeholder="Full Name" required>
+                <input type="email" id="email" placeholder="Email" required>
+                <input type="tel" id="phone" placeholder="Phone Number" required>
+                <input type="password" id="password" placeholder="Password" required>
+                <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+                <button type="submit">Register</button>
+            </form>
+            <p>Already have an account? <a href="login.html">Login</a></p>
+            <p id="signupError" style="color:red; display:none;">Passwords do not match!</p>
+        </div>
+    </section>
+
+    <script>
+        const signupForm = document.getElementById('signupForm');
+        signupForm.addEventListener('submit', function(e){
+            e.preventDefault();
+
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+
+            if(password !== confirmPassword){
+                document.getElementById('signupError').style.display = "block";
+            } else {
+                alert("Registration successful! Please login.");
+                window.location.href = "login.html"; // redirect to login page
+            }
+        });
+    </script>
+    <script src="signup.js"></script>
+</body>
+</html>

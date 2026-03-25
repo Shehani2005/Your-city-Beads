@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your City Beads</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <!-- HEADER -->
+  <section id="header">
+    <a href="index.html"><img src="Images/logo.png" class="logo"></a>
+    <div>
+      <ul id="navbar">
+        <li><a href="index.html">Home</a></li>
+        <li><a class="active" href="product.html">Products</a></li>
+        <li><a href="signup.html">Sign up</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+        <li><a class="active" href="profile.html"><i class="fa-solid fa-user"></i></a></li>
+      </ul> 
+    </div>
+  </section>
+
+  <!-- PRODUCT DETAILS -->
+  <section id="prodetails" class="section-p1">
+    <div class="single-pro-image">
+      <img id="MainImg" src="" width="100%" alt="">
+      <div class="small-img-group" id="smallImgs"></div>
+    </div>
+
+    <div class="single-pro-details">
+      <h6 id="category"></h6>
+      <h2 id="productName"></h2>
+      <h4 id="price"></h4>
+      <input type="number" value="1">
+      <button class="normal">Add to Cart</button>
+      <h4>Product Details</h4>
+      <span id="description"></span>
+    </div>
+  </section>
+
+  <!-- FEATURED PRODUCTS -->
+  <section id="product1" class="section-p1">
+    <h2>Featured Products</h2>
+    <p>BRACELETS</p>
+    <div class="pro-container">
+      <div class="pro" onclick="window.location.href='sproduct.html?product=b1';">
+        <img src="Images/products/b1.jpeg" alt="">
+        <div class="des">
+          <span>Boys</span>
+          <h5>Black & White Bracelets</h5>
+          <h4>LKR 250</h4>
+        </div>
+        <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
+      </div>
+      <div class="pro" onclick="window.location.href='sproduct.html?product=b9';">
+        <img src="Images/products/b9.jpeg" alt="">
+        <div class="des">
+          <span>Girls</span>
+          <h5>Spiral Bracelet</h5>
+          <h4>LKR 250</h4>
+        </div>
+        <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
+      </div>
+      <!-- Add more featured products as needed -->
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section id="newsletter" class="section-p1">
+    <div class="newstext">
+      <h4>Sign Up For Newsletters</h4>
+      <p>Get E-mail updates about our latest shop and <span>special offers.</span></p>
+    </div>
+    <div class="form">
+      <input type="text" placeholder="Your email address">
+      <button class="normal">Sign Up</button>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="section-p1">
+    <div class="col">
+      <img class="logo" src="Images/logo.png" alt="">   
+      <h4>Contact</h4> 
+      <p><strong>Address:</strong>Kurunegala,Sri Lanka</p>
+      <p><strong>Phone:</strong>(+94)71 475 9644</p>
+      <div class="follow">
+        <h4>Follow us</h4>
+        <div class="icon">
+          <i class="fab fa-facebook-f"></i>
+          <i class="fab fa-instagram"></i>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <h4>About</h4>
+      <a href="#">About us</a>
+      <a href="#">Delivery Information</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms & Conditions</a>
+      <a href="#">Contact us</a>
+    </div>
+
+    <div class="col">
+      <h4>My Account</h4>
+      <a href="#">View Cart</a>
+      <a href="#">My Wishlist</a>
+      <a href="#">Track My Order</a>
+      <a href="#">Help</a>
+    </div>
+
+    <div class="col pay">
+      <h4>Secured Payment Gateways</h4>
+      <img src="Images/pay.png" alt="">
+    </div>
+
+    <div class="copyright">
+      <p>@2025 -Your City Beads</p>
+    </div>
+  </footer>
+
+  <!-- PRODUCTS DATA -->
+  <script>
+    const products = {
+      b1: {
+        name: "Black & White Bracelets",
+        category: "Boys",
+        price: 250,
+        mainImg: "Images/products/b1.jpeg",
+        smallImgs: [
+          "Images/products/b1.jpeg",
+          "Images/products/b1.1.jpeg",
+          "Images/products/b1.2.jpeg",
+          "Images/products/b1.3.jpeg"
+        ],
+        description: "These handmade bracelets are designed specially for boys and come in two separate styles: a black bracelet and a white bracelet..."
+      },
+      b9: {
+        name: "Spiral Bracelet",
+        category: "Girls",
+        price: 250,
+        mainImg: "Images/products/b9.jpeg",
+        smallImgs: ["Images/products/b9.jpeg"],
+        description: "Elegant spiral bracelet for girls..."
+      },
+      b4: {
+        name: "Couple Bracelets",
+        category: "Girls & Boys",
+        price: 500,
+        mainImg: "Images/products/b4.jpeg",
+        smallImgs: ["Images/products/b4.jpeg"],
+        description: "Perfect couple bracelet set..."
+      }
+      // Add more products here
+    };
+
+    // Load product based on URL query
+    const params = new URLSearchParams(window.location.search);
+    const productId = params.get("product");
+
+    if (products[productId]) {
+      const product = products[productId];
+      document.getElementById("MainImg").src = product.mainImg;
+      document.getElementById("category").innerText = product.category;
+      document.getElementById("productName").innerText = product.name;
+      document.getElementById("price").innerText = `LKR ${product.price}`;
+      document.getElementById("description").innerText = product.description;
+
+      const smallImgsDiv = document.getElementById("smallImgs");
+      smallImgsDiv.innerHTML = "";
+      product.smallImgs.forEach(imgSrc => {
+        const div = document.createElement("div");
+        div.className = "small-img-col";
+        div.innerHTML = `<img src="${imgSrc}" class="small-img">`;
+        smallImgsDiv.appendChild(div);
+
+        div.querySelector("img").onclick = () => {
+          document.getElementById("MainImg").src = imgSrc;
+        };
+      });
+    } else {
+      document.body.innerHTML = "<h2>Product not found!</h2>";
+    }
+  </script>
+</body>
+</html>
