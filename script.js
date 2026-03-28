@@ -160,3 +160,29 @@ loginForm.addEventListener('submit', function(e){
             document.getElementById('loginError').style.display = "block";
         }
     });
+
+//Sign up
+    // Get the signup form element by its ID
+    const signupForm = document.getElementById('signupForm');
+    // Add an event listener for the 'submit' event of the form
+    signupForm.addEventListener('submit', function(e){
+        // Prevent the default form submission 
+            e.preventDefault();
+            
+            // Get the value entered in the password field
+            const password = document.getElementById('password').value;
+            // Get the value entered in the confirm password field
+            const confirmPassword = document.getElementById('confirmPassword').value;
+
+            // Check if the password and confirm password match
+            if(password !== confirmPassword){
+                // If they don't match, show an error message
+                document.getElementById('signupError').style.display = "block";
+            } else {
+                // If passwords match, show a success alert
+                alert("Registration successful! Please login.");
+                 // Redirect the user to the login page
+                window.location.href = "login.html"; // redirect to login page
+            }
+        });
+    
