@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Page title -->
+    <title>Purchase History - Your City Beads</title>
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header-->
+<header>
+    <h1>Your City Beads</h1>
+    <p>Purchase History</p>
+</header>
+
+<!-- Main container for page content -->
+<div class="container">
+    <h2>Your Orders</h2>
+    <!-- Table displaying purchase history -->
+    <table>
+        <!-- Table header defining column names -->
+        <thead>
+            <tr>
+                <th>Order ID</th>
+                <th>No. of items</th>
+                <th>Product</th>
+                <th>Date</th>
+                <th>Price (LKR)</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+
+        <!-- Table body containing order data -->
+        <tbody>
+            <!-- First order row -->
+            <tr>
+                <td>#1001</td>
+                <td>2</td>
+                <td>P5 bangles</td>
+                <td>2026-03-20</td>
+                <td>500</td>
+                <td><span class="status delivered">Delivered</span></td>
+            </tr>
+
+            <!-- Second order row -->
+            <tr>
+                <td>#1002</td>
+                <td>1 pair</td>
+                <td>Couple Bracelets</td>
+                <td>2026-03-22</td>
+                <td>500</td>
+                <td><span class="status pending">Pending</span></td>
+            </tr>
+
+            <!-- Third order row -->
+            <tr>
+                <td>#1003</td>
+                <td>1</td>
+                <td>Rainbow Bracelet</td>
+                <td>2026-03-25</td>
+                <td>250</td>
+                <td><span class="status cancelled">Cancelled</span></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- Footer section with copyright and navigation link -->
+<footer>
+    &copy; 2025 Your City Beads<a href="index.html">Back to Home</a>
+</footer>
+
+</body>
+</html>
