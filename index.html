@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+   <!-- Basic page setup -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your City Beads</title>
+    <!-- External CSS files -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 </head>
 <body>
+  <!--NAVBAR -->
     <section id="header">
         <a href="index.html"><img src="Images/logo.png" class="logo"></a>
         <div>
@@ -17,22 +20,28 @@
             <li><a href="product.html">Products</a></li>
             <li><a href="signup.html">Sign up</a></li>
             <li><a href="login.html">Login</a></li>
+             <!-- Cart icon -->
             <li><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+             <!-- Profile icon -->
             <li><a href="profile.html"><i class="fa-solid fa-user"></i></a></li>
            </ul> 
         </div>
     </section>
     
+    <!-- HERO SECTION (Main banner) -->
     <section class="hero">
     <div class="hero-text">
         <p>Refined beauty, made by hand</p>
         <h2>Exclusive deals on</h2>
         <h2 class="highlight">all luxury pieces</h2>
         <p>Unlock exclusive savings up to 40%</p>
+
+        <!-- Button to go to products page -->
         <button href="product.html" class="shop-btn" onclick="location.href='product.html'">Shop Now</button>
     </div>
 </section>
 
+<!-- FEATURES SECTION -->
 <section id="feature" class="section-p1">
     <div class="fe-box">
         <img src="Images/online shopping.jpg">
@@ -60,15 +69,19 @@
     </div>
 </section>
 
+<!-- FEATURED PRODUCTS -->
 <section id="product1" class="section-p1">
     <h2>Featured Products</h2>
     <p>BRACELETS</p>
+
     <div class="pro-container">
+      <!-- Single product card -->
         <div class="pro">
           <img src="Images/products/b1.jpeg" alt="">
           <div class="des">
             <span> Boys</span>
             <h5>Black & White Bracelets</h5>
+             <!-- Star rating -->
             <div class="star">
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
@@ -78,7 +91,8 @@
             </div>
             <h4>LKR 250</h4>
           </div>
-          </a>
+
+          <!-- Add to cart icon -->
           <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
         </div>  
         <div class="pro">
@@ -189,12 +203,15 @@
         </div>  
     </div>
 </section>
+
+<!-- BANNER SECTION -->
 <section id="banner" class="section-p1">
     <h4>Repair Services</h4>
     <h2>Up to <span>70% off</span></h2>
     <button class="normal">Explore More</button>
 </section>
 
+<!-- NEW ARRIVALS -->
 <section id="new-arrivals" class="section-p1">
 
     <h2>New Arrivals</h2>
@@ -206,6 +223,7 @@
             <div class="des">
                 <span>Girls</span>
                 <h5>White Themed Bangle</h5>
+                <!-- Stars -->
                 <div class="star">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
@@ -215,6 +233,7 @@
                 </div>
                 <h4>LKR 400</h4>
             </div>
+             <!-- Cart icon -->
             <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
         </div>
 
@@ -253,23 +272,30 @@
         </div>
     </div>
 </section>
+
+  <!-- NEWSLETTER -->
 <section id="newsletter"  class="section-p1" section-m1>
   <div class="newstext">
     <h4>Sign Up For Newsletters</h4>
     <p>Get E-mail updates about our latest shop and <span>special offers.</span></p>
   </div>
+  <!-- Email input -->
   <div class="form">
     <input type="text" placeholder="Your email address">
     <button class="normal">Sign Up</button>
   </div>
 </section>
 
+<!-- FOOTER -->
 <footer class="section-p1">
+  <!-- Contact details -->
   <div class="col">
     <img class="logo" src="Images/logo.png" alt="">   
     <h4>Contact</h4> 
     <p><strong>Address:</strong>Kurunegala,Sri Lanka</p>
     <p><strong>Phone:</strong>(+94)71 475 9644</p>
+
+     <!-- Social media links -->
     <div class="follow">
       <h4>Follow us</h4>
       <div class="social-icons">
@@ -279,8 +305,9 @@
         <a href="https://www.tiktok.com/@your.city_beads?_r=1&_t=ZS-94xAFbtUA1E" target="_blank"><i class="fab fa-tiktok"></i></a>
     </div>
     </div>
-   </div>
+    </div>
 
+    <!-- About links -->
    <div class="col">
     <h4>About</h4>
     <a href="about.html">About us</a>
@@ -290,6 +317,7 @@
     <a href="#">Contact us</a>
    </div>
 
+   <!-- Account links -->
    <div class="col">
     <h4>My Account</h4>
     <a href="cart.html">View Cart</a>
@@ -297,16 +325,20 @@
     <a href="#">Help</a>
    </div>
 
+   <!-- Payment -->
    <div class="col pay">
     <h4>Secured Payment Gateways</h4>
     <img src="Images/pay.png" alt="">
    </div>
 
+   <!-- Copyright -->
    <div class="copyright">
     <p>&copy; 2025 Your City Beads </p>
    </div>
 
 </footer>
+
+ <!-- JavaScript file -->
 <script src="script.js"></script>
 </body>
 </html>
