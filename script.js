@@ -1,5 +1,7 @@
+// Get user data from localStorage and convert it from JSON to object
 const user = JSON.parse(localStorage.getItem("user"));
 
+// If user exists, show their name in the navbar
 if(user){
     const nav = document.getElementById("navbar");
 
@@ -8,17 +10,17 @@ if(user){
     nav.appendChild(li);
 }
 
-// logout function
+// Logout function (removes user data and redirects to login page)
 function logout(){
     localStorage.removeItem("user");
     alert("Logged out");
     window.location.href = "login.html";
 }
 
+// Variable to track edit mode
 let isEditing = false;
 
-const user = JSON.parse(localStorage.getItem("user"));
-
+// Get profile elements
 const nameEl = document.getElementById("userName");
 const emailEl = document.getElementById("email");
 const phoneEl = document.getElementById("phone");
@@ -26,66 +28,70 @@ const addressEl = document.getElementById("address");
 const profilePic = document.getElementById("profilePic");
 const saveBtn = document.getElementById("saveBtn");
 
-// Load user data
+// Load user data into profile fields
 if (user) {
-    nameEl.innerText = user.name;
-    emailEl.value = user.email;
-    phoneEl.value = user.phone;
-    addressEl.value = user.address;
+    nameEl.innerText = user.name;   //Set name
+    emailEl.value = user.email;     //Set email
+    phoneEl.value = user.phone;     //Set phone
+    addressEl.value = user.address; // Set address
 
-    updateInitials(user.name);
+    updateInitials(user.name);    // Show initials in profile picture
 }
 
-// Disable inputs initially
+// Disable input fields at the beginning
 setInputsDisabled(true);
 
-// Toggle edit mode
+// Function to enable editing mode
 function toggleEdit() {
-    isEditing = true;
-    setInputsDisabled(false);
-    saveBtn.style.display = "block";
+    isEditing = true;         // Set editing to true
+    setInputsDisabled(false);        // Enable input fields
+    saveBtn.style.display = "block";            // Show save button
 }
 
 // Save profile
 function saveProfile() {
     const updatedUser = {
-        name: nameEl.innerText,
-        email: emailEl.value,
-        phone: phoneEl.value,
-        address: addressEl.value,
-        password: user.password
+        name: nameEl.innerText,     // Get updated name
+        email: emailEl.value,       // Get updated email
+        phone: phoneEl.value,       // Get updated phone
+        address: addressEl.value,   // Get updated address
+        password: user.password     // Keep old password
     };
 
+    // Save updated user back to localStorage
     localStorage.setItem("user", JSON.stringify(updatedUser));
 
-    updateInitials(updatedUser.name);
+    updateInitials(updatedUser.name);   // Update initials display
 
-    setInputsDisabled(true);
-    saveBtn.style.display = "none";
+    setInputsDisabled(true);       // Disable inputs again
+    saveBtn.style.display = "none";   // Hide save button
 
-    alert("Profile updated!");
-}
+    alert("Profile updated!");        // Show confirmation
+} 
 
-// Enable/Disable inputs
+// Enable/disable input fields
 function setInputsDisabled(state) {
-    emailEl.disabled = state;
-    phoneEl.disabled = state;
-    addressEl.disabled = state;
+    emailEl.disabled = state;        // Disable/enable email
+    phoneEl.disabled = state;        // Disable/enable phone
+    addressEl.disabled = state;      // Disable/enable address
 }
 
-// Update initials
+// Generate initials from name
 function updateInitials(name) {
     const initials = name
-        .split(" ")
-        .map(word => word[0])
-        .join("")
-        .toUpperCase();
+        .split(" ")           // Split name into words
+        .map(word => word[0])       // Take first letter of each word
+        .join("")           // Join letters
+        .toUpperCase();     // Convert to uppercase
 
-    profilePic.innerText = initials;
+    profilePic.innerText = initials;    // Display initials
 }
+
+// Signup form submit event
 document.getElementById("signupForm").addEventListener("submit", function(e){
     e.preventDefault();
 
+     // Create user object from form inputs
     const user = {
         name: document.getElementById("name").value,
         email: document.getElementById("email").value,
@@ -95,50 +101,42 @@ document.getElementById("signupForm").addEventListener("submit", function(e){
 
     const confirmPassword = document.getElementById("confirmPassword").value;
 
+    // Check if passwords match
     if(user.password !== confirmPassword){
         document.getElementById("signupError").style.display = "block";
         return;
     }
 
+    // Save user in localStorage
     localStorage.setItem("user", JSON.stringify(user));
 
     alert("Registered successfully!");
-    window.location.href = "login.html";
+    window.location.href = "login.html";    // Redirect to login page
 });
 
+// Login form submit event
 document.getElementById("loginForm").addEventListener("submit", function(e){
-    e.preventDefault();
+    e.preventDefault();    // Prevent page reload
 
+    // Get entered email and password
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
 
+     // Get stored user
     const user = JSON.parse(localStorage.getItem("user"));
 
+    // If no user found
     if(!user){
         alert("No account found! Please sign up.");
         window.location.href = "signup.html";
         return;
     }
 
+    // Check login credentials
     if(email === user.email && password === user.password){
         alert("Login successful!");
         window.location.href = "index.html";
     } else {
-        document.getElementById("loginError").style.display = "block";
+        document.getElementById("loginError").style.display = "block";  // Show error
     }
 });
-
-function sortLowToHigh() {
-    let productList = document.getElementById("product-list");
-    let products = Array.from(productList.getElementsByClassName("product"));
-
-    products.sort(function(a, b) {
-        return a.dataset.price - b.dataset.price;
-    });
-
-    productList.innerHTML = "";
-
-    products.forEach(function(product) {
-        productList.appendChild(product);
-    });
-}
