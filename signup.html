@@ -3,14 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Page title -->
     <title>Sign Up - Your City Beads</title>
+    <!-- External CSS file -->
     <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
+    <!-- Header section containing logo and navigation bar -->
     <section id="header">
+        <!-- Logo linking to home page -->
         <a href="#"><img src="Images/logo.png" class="logo"></a>
         <div>
+            <!-- Navigation bar -->
            <ul id="navbar">
             <li><a href="index.html">Home</a></li>
             <li><a href="product.html">Products</a></li>
@@ -21,38 +27,27 @@
            </ul> 
         </div>
     </section>
+    <!-- Authentication section for Sign Up -->
     <section class="auth-section">
         <div class="auth-box">
             <h2>Sign Up</h2>
+            <!-- Sign-up form -->
             <form id="signupForm">
                 <input type="text" id="name" placeholder="Full Name" required>
                 <input type="email" id="email" placeholder="Email" required>
                 <input type="tel" id="phone" placeholder="Phone Number" required>
                 <input type="password" id="password" placeholder="Password" required>
                 <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+                <!-- Submit button -->
                 <button type="submit">Register</button>
             </form>
+            <!-- Link to login page for users who already have an account -->
             <p>Already have an account? <a href="login.html">Login</a></p>
             <p id="signupError" style="color:red; display:none;">Passwords do not match!</p>
         </div>
     </section>
 
-    <script>
-        const signupForm = document.getElementById('signupForm');
-        signupForm.addEventListener('submit', function(e){
-            e.preventDefault();
-
-            const password = document.getElementById('password').value;
-            const confirmPassword = document.getElementById('confirmPassword').value;
-
-            if(password !== confirmPassword){
-                document.getElementById('signupError').style.display = "block";
-            } else {
-                alert("Registration successful! Please login.");
-                window.location.href = "login.html"; // redirect to login page
-            }
-        });
-    </script>
-    <script src="signup.js"></script>
+    <!-- JavaScript File -->
+    <script src="script.js"></script>
 </body>
 </html>
