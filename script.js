@@ -63,7 +63,7 @@ function saveProfile() {
 
     updateInitials(updatedUser.name);   // Update initials display
 
-    setInputsDisabled(true);       // Disable inputs again
+    setInputsDisabled(true);          // Disable inputs again
     saveBtn.style.display = "none";   // Hide save button
 
     alert("Profile updated!");        // Show confirmation
@@ -140,3 +140,23 @@ document.getElementById("loginForm").addEventListener("submit", function(e){
         document.getElementById("loginError").style.display = "block";  // Show error
     }
 });
+
+//JavaScript for login 
+const loginForm = document.getElementById('loginForm');
+// Add event listener for form submission
+loginForm.addEventListener('submit', function(e){
+    // Prevent page reload
+    e.preventDefault();
+
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+
+    // Simple demo login check
+        if(email === "test@example.com" && password === "1234"){
+            // Success message
+            alert("Login successful!");
+        } else {
+            // Show error message if login fails
+            document.getElementById('loginError').style.display = "block";
+        }
+    });
