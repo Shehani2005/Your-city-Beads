@@ -3,53 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Page title -->
     <title>Login - Your City Beads</title>
+    <!-- External CSS file -->
     <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
+    <!-- Header -->
      <section id="header">
         <a href="#"><img src="Images/logo.png" class="logo"></a>
         <div>
+            <!-- Navigation menu -->
            <ul id="navbar">
             <li><a href="index.html">Home</a></li>
             <li><a href="product.html">Products</a></li>
             <li><a href="signup.html">Sign up</a></li>
+            <!-- Active page (Login) -->
             <li><a class="active" href="login.html">Login</a></li>
+             <!-- Cart icon -->
             <li><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+            <!-- Profile icon -->
             <li><a href="profile.html"><i class="fa-solid fa-user"></i></a></li>
            </ul> 
         </div>
     </section>
+
+    <!-- Login section -->
     <section class="auth-section">
         <div class="auth-box">
+
+            <!-- Login heading -->
             <h2>Login</h2>
+
+            <!-- Login form -->
             <form id="loginForm">
+                
+                 <!-- Email input -->
                 <input type="email" id="email" placeholder="Email" required>
+                
+                <!-- Password input -->
                 <input type="password" id="password" placeholder="Password" required>
+                
+                <!-- Submit button -->
                 <button type="submit">Login</button>
             </form>
+
+            <!-- Link to signup page -->
             <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+            <!-- Error message -->
             <p id="loginError" style="color:red; display:none;">Invalid credentials! Please sign up.</p>
         </div>
     </section>
-
-    <script>
-        const loginForm = document.getElementById('loginForm');
-        loginForm.addEventListener('submit', function(e){
-            e.preventDefault();
-
-            const email = document.getElementById('email').value;
-            const password = document.getElementById('password').value;
-
-            // Simple demo logic, replace with your backend verification
-            if(email === "test@example.com" && password === "1234"){
-                alert("Login successful!");
-            } else {
-                document.getElementById('loginError').style.display = "block";
-            }
-        });
-    </script>
+<!-- External JavaScript  -->
 <script src="login.js"></script>
 </body>
 </html>
