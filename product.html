@@ -3,30 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Page title -->
     <title>Your City Beads</title>
+    <!-- External CSS -->
     <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 </head>
 <body>
+   <!-- HEADER -->
     <section id="header">
+
+      <!-- Logo -->
         <a href="index.html"><img src="Images/logo.png" class="logo"></a>
         <div>
+
+          <!-- Navigation bar -->
            <ul id="navbar">
             <li><a href="index.html">Home</a></li>
             <li><a class="active" href="product.html">Products</a></li>
             <li><a href="signup.html">Sign up</a></li>
             <li><a href="login.html">Login</a></li>
+            <!-- Cart icon -->
             <li><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+            <!-- Profile icon -->
             <li><a href="profile.html"><i class="fa-solid fa-user"></i></a></li>
            </ul> 
         </div>
     </section>
-
+    
+    <!-- SEARCH + FILTER SECTION -->
     <div class="search-box">
+      <!-- Search input -->
       <input type="text" placeholder="Search Products...">
+      <!-- Search button -->
       <button><i class="fa fa-search"></i></i></button>
 
+    <!-- Category filter -->
     <select>
       <option value="Girls">All categories</option>
       <option>Girls</option>
@@ -38,21 +52,26 @@
       <option>Rings</option>
     </select>
 
+    <!-- Price filter -->
     <select>
         <option>All Prices</option>
         <option>Under LKR 350</option>
         <option>LKR 350-500</option>
         <option>LKR500+</option>
       </select>
+
+      <!-- Sort option -->
       <select>
         <option>Price: Low to High</option>
         <option>Price: High to Low</option>
       </select>
    </div>
 
-
+   <!-- PRODUCT SECTION -->
 <section id="product1" class="section-p1">
     <div class="pro-container">
+
+      <!-- Single product card -->
         <div class="pro">
           <img src="Images/products/b1.jpeg" alt="">
           <div class="des">
@@ -60,8 +79,10 @@
             <h5>Black & White Bracelets</h5>
             <h4>LKR 250</h4>
           </div>
+          <!-- Add to cart icon -->
           <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
-        </div>  
+        </div>
+        <!-- Repeat product cards -->  
         <div class="pro">
           <img src="Images/products/b9.jpeg" alt="">
           <div class="des">
@@ -151,88 +172,83 @@
         </div>
     </div>
 </section>
-<button onclick="sortLowToHigh()">Sort Price: Low to High</button>
 
-<!-- Product List -->
-<div id="product-list">
-
-    <div class="product" data-price="250">
-        <h3>Necklace</h3>
-        <p>Price: 250</p>
-    </div>
-
-    <div class="product" data-price="150">
-        <h3>Bracelet</h3>
-        <p>Price: 150</p>
-    </div>
-
-    <div class="product" data-price="2000">
-        <h3>Ring</h3>
-        <p>Price: 2000</p>
-    </div>
-
-</div>
-
-<script src="script.js"></script>
-
+<!-- PAGINATION -->
 <section id="pagination" class="section-p1">
   <a href="#">1</a>
   <a href="#">2</a>
   <a href="#"><i class="fa-solid fa-arrow-right"></i></a>
 </section>
+
+<!-- NEWSLETTER SECTION -->
 <section id="newsletter"  class="section-p1" section-m1>
   <div class="newstext">
     <h4>Sign Up For Newsletters</h4>
     <p>Get E-mail updates about our latest shop and <span>special offers.</span></p>
   </div>
+
+  <!-- Email form -->
   <div class="form">
     <input type="text" placeholder="Your email address">
     <button class="normal">Sign Up</button>
   </div>
 </section>
 
+<!-- FOOTER -->
 <footer class="section-p1">
+
+  <!-- Contact info -->
   <div class="col">
     <img class="logo" src="Images/logo.png" alt="">   
     <h4>Contact</h4> 
     <p><strong>Address:</strong>Kurunegala,Sri Lanka</p>
     <p><strong>Phone:</strong>(+94)71 475 9644</p>
+
+     <!-- Social media -->
     <div class="follow">
       <h4>Follow us</h4>
-      <div class="social-icons">
+     <div class="social-icons">
         <a href="https://www.facebook.com/share/1Dn8T6HMxe/?mibextid=wwXIfr" target="_blank"><i class="fab fa-facebook-f"></i></a>
         <a href="https://www.instagram.com/your.city_beads?igsh=MWphZGE1OWZ0Nzg5aw%3D%3D&utm_source=qr" target="_blank"><i class="fab fa-instagram"></i></a>
         <a href="wa.me/94725350671" target="_blank"><i class="fab fa-whatsapp"></i></a>
         <a href="https://www.tiktok.com/@your.city_beads?_r=1&_t=ZS-94xAFbtUA1E" target="_blank"><i class="fab fa-tiktok"></i></a>
-    </div>
+      </div>
     </div>
    </div>
 
+   <!-- About links -->
    <div class="col">
     <h4>About</h4>
-    <a href="#">About us</a>
+    <a href="about.html">About us</a>
     <a href="#">Delivery Information</a>
     <a href="privacy.html">Privacy Policy</a>
     <a href="terms.html">Terms & Conditions</a>
     <a href="#">Contact us</a>
    </div>
 
+   <!-- Account links -->
    <div class="col">
     <h4>My Account</h4>
     <a href="cart.html">View Cart</a>
-    <a href="#">My Wishlist</a>
     <a href="#">Track My Order</a>
+     <a href="purchase.html">Purchase History</a>
     <a href="#">Help</a>
    </div>
 
+   <!-- Payment section -->
    <div class="col pay">
     <h4>Secured Payment Gateways</h4>
     <img src="Images/pay.png" alt="">
    </div>
 
+   <!-- Copyright -->
    <div class="copyright">
-    <p>@2025 -Your City Beads</p>
+    <p>&copy; 2025 Your City Beads </p>
    </div>
 </footer>
+
+ <!-- JavaScript file -->
+<script src="script.js"></script>
+
 </body>
 </html>
