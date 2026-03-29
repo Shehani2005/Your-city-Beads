@@ -37,7 +37,7 @@ body {
  }
 
 
-
+/*Navbar*/
  #navbar{
     display: flex;
     align-items: center;
@@ -127,12 +127,12 @@ body {
 #feature {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;   /* same horizontal line */
-    gap: 60px;                    /* spread boxes evenly */
+    justify-content: space-between;   
+    gap: 60px;                        
     align-items: center;
-    flex-wrap: nowrap;                /* wrap on small screens */
-    padding: 60px 80px;             /* spacing around the section */
-    background-color: #fff8f5;      /* soft warm background */
+    flex-wrap: nowrap;                
+    padding: 60px 80px;             
+    background-color: #fff8f5;     
 }
 
 /* Feature box styling */
@@ -142,21 +142,21 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;                  /* slightly smaller width */
+    align-items: center;                  
     text-align: center;
     padding: 20px 15px;
-    border-radius: 12px;            /* smooth rounded corners */
+    border-radius: 12px;                      /* smooth rounded corners */
     border: 1px solid rgba(200, 200, 200, 0.3);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
     margin: 15px;
-    transition: all 0.3s ease;      /* smooth hover effect */
-    background-color: #fff8f0;      /* luxury ivory color */
+    transition: all 0.3s ease;      
+    background-color: #fff8f0;      
 }
 
 /* Hover effect */
 #feature .fe-box:hover {
-    box-shadow: 0 12px 30px rgba(212, 139, 139, 0.2); /* soft pink glow */
-    transform: translateY(-5px);     /* subtle lift */
+    box-shadow: 0 12px 30px rgba(212, 139, 139, 0.2); 
+    transform: translateY(-5px);    
 }
 
 /* Icon */
@@ -178,10 +178,10 @@ body {
 }
 /*Procuts*/
 #product1 h2 {
-    font-family: 'Georgia', serif;   /* classic serif font */
-    font-size: 36px;                 /* adjust size */
-    font-weight: 700;                /* bold */
-    color: #d48b8b;                  /* soft pink/luxury color */
+    font-family: 'Georgia', serif;   
+    font-size: 36px;                 
+    font-weight: 700;              
+    color: #d48b8b;                 
 }
 #product1{
     text-align: center;
@@ -254,12 +254,12 @@ body {
 #product1 .pro .cart {
     width: 35px;
     height: 35px;
-    border-radius: 50%;           /* perfect circle */
-    background-color: #f3cfc6;    /* rose-gold background */
-    color: black;               /* cart icon color */
+    border-radius: 50%;          
+    background-color: #f3cfc6;    
+    color: black;              
     position: absolute;
-    bottom: 10px;                  /* lower inside card */
-    right: 10px;                   /* place inside card */
+    bottom: 10px;                  
+    right: 10px;                   
     display: flex;
     justify-content: center;
     align-items: center;
@@ -276,22 +276,22 @@ body {
 /* Flex container for the info row */
 #product1 .pro .des .info-line {
     display: flex;
-    align-items: center;             /* vertically center items */
-    justify-content: space-between;  /* left-items left, price right */
-    gap: 10px;                       /* spacing between left and right */
+    align-items: center;             
+    justify-content: space-between;  
+    gap: 10px;                      
 }
 /* Group the first three items */
 #product1 .pro .des .left-items {
     display: flex;
     align-items: center;
-    gap: 10px;                       /* spacing between type, color, stars */
+    gap: 10px;                       
 }
 /* Stars display nicely */
 #product1 .pro .des .star {
     display: flex;
-    gap: 2px;                        /* spacing between stars */
+    gap: 2px;                        
 }
-/* Optional: smaller font for info line */
+/*  smaller font for info line */
 #product1 .pro .des .type,
 #product1 .pro .des .color,
 #product1 .pro .des .price {
@@ -317,7 +317,7 @@ body {
     background-repeat: no-repeat;
 
     width: 100%;
-    height: 22vh;   /* reduced height (thin banner) */
+    height: 22vh;   /* reduced height  */
 
     position: relative;
     overflow: hidden;
@@ -333,8 +333,8 @@ body {
     height: 100%;
 
     background: linear-gradient(
-        rgba(255, 240, 245, 0.85),   /* light pink */
-        rgba(243, 207, 198, 0.85)    /* soft peach */
+        rgba(255, 240, 245, 0.85),  
+        rgba(243, 207, 198, 0.85)    
     );
 
     z-index: 1;
@@ -570,26 +570,25 @@ footer a:hover{
 #prodetails .single-pro-details button {
     background: #088178;
     color: white;
-    width: 30%;           /* make it full width */
-    padding: 15px 0;       /* taller button */
-    font-size: 18px;       /* bigger text */
-    font-weight: 700;      /* bold text */
-    border: none;          /* remove border */
-    border-radius: 8px;    /* smooth corners */
-    cursor: pointer;       /* pointer on hover */
-    transition: 0.3s ease; /* smooth hover effect */
+    width: 30%;           
+    padding: 15px 0;       
+    font-size: 18px;       
+    font-weight: 700;      
+    border: none;          
+    border-radius: 8px;    
+    cursor: pointer;       
+    transition: 0.3s ease; 
 }
 
 #prodetails .single-pro-details button:hover {
-    background-color: #065d55; /* darker shade on hover */
-    transform: scale(1.02);    /* subtle zoom effect */
+    background-color: #065d55; 
+    transform: scale(1.02);    
 }
 #prodetails .single-pro-details span{
     line-height: 25px;
 }
 
 /* Login / Sign Up Boxes Styling */
-
 .auth-section{
     display: flex;
     justify-content: center;
@@ -658,87 +657,201 @@ footer a:hover{
 .auth-box a:hover{
     text-decoration: underline;
 }
+/*Cart*/
+#cart {
+    width: 90%;
+    margin: 30px auto;
+    border-radius: 12px;
+    overflow: hidden;
+    font-family: 'Georgia', serif;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+    background-color: #fff8f0; /* soft ivory background */
+}
 
-/* cart page */
-#cart table{
-    width: 100;
+/* Table layout */
+#cart table {
+    width: 100%;
     border-collapse: collapse;
     table-layout: fixed;
-    white-space: nowrap;
 }
-#cart table img{
-    width: 70px;
-    border-radius: 20px;
+
+/* Table header */
+#cart thead {
+    background: linear-gradient(90deg, #D4AF37, #F3CFC6); 
+    color: #fff;
 }
-#cart table td:nth-child(1){
-    width: 100px;
-    text-align: center;
-}
-#cart table td:nth-child(2){
-    width: 150px;
-    text-align: center;
-}
-#cart table td:nth-child(3){
-    width: 250px;
-    text-align: center;
-}
-#cart table td:nth-child(4),
-#cart table td:nth-child(5),
-#cart table td:nth-child(6){
-    width: 150px;
-    text-align: center;
-}
-#cart table td:nth-child(5) input{
-    width: 40px;
-    padding: 5px;
-}
-#cart table thead{
-    border: 1px solid #e2e9e1;
-    border-left: none;
-    border-right: none;
-}
-#cart table thead td{
+
+#cart thead th {
     font-weight: 700;
     text-transform: uppercase;
+    font-size: 14px;
+    padding: 15px 10px;
+    text-align: center;
+    border-bottom: 2px solid #d4af37;
+}
+
+/* Table body cells */
+#cart tbody td {
+    padding: 12px 10px;
+    text-align: center;
     font-size: 13px;
-    padding: 18px 0;
+    border-bottom: 1px solid #f0e4d3;
 }
-#cart table tbody tr td{
-    padding-top: 15px;
+
+/* Row hover effect */
+#cart tbody tr:hover {
+    background-color: #fff0f5; /* soft pink on hover */
+    transition: 0.3s ease;
 }
-#cart table tbody td{
-    font-size: 13px;
+
+/* Images in table */
+#cart tbody td img {
+    width: 70px;
+    border-radius: 12px;
 }
-#subtotal{
-    width: 50%;
-    margin-bottom: 30px;
+
+/* Quantity input */
+#cart tbody td input[type="number"] {
+    width: 50px;
+    padding: 5px;
+    text-align: center;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+/* Status labels */
+.status {
+    padding: 5px 12px;
+    border-radius: 12px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.delivered {
+    background-color: #28a745; /* green */
+}
+
+.pending {
+    background-color: #ff9800; /* orange */
+}
+
+.cancelled {
+    background-color: #e53935; /* red */
+}
+
+/* Remove / action buttons */
+#cart tbody td button {
+    padding: 5px 10px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s ease;
+    color: #fff;
+    background: linear-gradient(90deg, #d48b8b, #7a4e48); 
+}
+
+#cart tbody td button:hover {
+    transform: scale(1.05);
+    background: linear-gradient(90deg, #7a4e48, #d48b8b);
+}
+
+/* Responsive table for small screens */
+@media (max-width: 600px) {
+    #cart table, #cart thead, #cart tbody, #cart th, #cart td, #cart tr {
+        display: block;
+    }
+    #cart thead {
+        display: none;
+    }
+    #cart tbody td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+    }
+    #cart tbody td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 15px;
+        width: 45%;
+        text-align: left;
+        font-weight: 700;
+        color: #5a3e36; /* deep brown */
+    }
+}
+/* Subtotal container */
+#subtotal {
+    width: 400px; 
+    margin: 50px auto; 
     border: 1px solid #e2e9e1;
     padding: 30px;
+    background-color: #fff; 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 10px; 
+    text-align: center; 
+    font-family: 'Arial', sans-serif;
 }
-#subtotal table{
+
+/* Heading inside subtotal */
+#subtotal h3 {
+    padding-bottom: 15px;
+    color: #088178; 
+    font-size: 20px;
+    margin: 0;
+}
+
+/* Table inside subtotal */
+#subtotal table {
     border-collapse: collapse;
     width: 100%;
     margin-bottom: 20px;
 }
-#subtotal table td{
+
+/* Table cells */
+#subtotal table td {
     width: 50%;
     border: 1px solid #e2e9e1;
     padding: 10px;
-    font-size: 13px;
+    font-size: 14px;
+    text-align: left;
 }
-#subtotal h3{
-    padding-bottom: 15px;
+
+/* Total row styling */
+#subtotal table tr:last-child td {
+    font-weight: bold;
+    font-size: 16px;
+    background-color: #f7f7f7;
 }
+
+/* Button styling */
 #subtotal button {
     background-color: #088178;
     color: #fff8f0;
-    padding: 12px 20px;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Hover effect for button */
+#subtotal button:hover {
+    background-color: #06635c;
+}
+
+/* Make it responsive */
+@media (max-width: 500px) {
+    #subtotal {
+        width: 90%; 
+        padding: 20px;
+    }
 }
 
 
 
-/* PROFILE PAGE */
-
+/* Profile page */
 .profile-container {
     width: 380px;
     margin: 80px auto;
@@ -893,18 +1006,18 @@ footer a {
     }
 }
 /*Privacy Policy*/
-/* --- Body --- */
+/* Body */
 body {
     font-family: 'Segoe UI', sans-serif;
-    background-color: #fdf8f3; /* soft handmade cream */
+    background-color: #fdf8f3; 
     color: #4a3f35;
     margin: 0;
     padding: 0;
 }
 
-/* --- Header --- */
+/* Header */
 header {
-    background: linear-gradient(90deg, #d4a373, #b08968); /* warm brown tones */
+    background: linear-gradient(90deg, #d4a373, #b08968); 
     color: white;
     text-align: center;
     padding: 30px 20px;
@@ -916,7 +1029,7 @@ header h1 {
     letter-spacing: 1px;
 }
 
-/* --- Main Content --- */
+/* Main Content */
 main {
     max-width: 850px;
     margin: 40px auto;
@@ -949,7 +1062,7 @@ main p {
     margin-bottom: 15px;
 }
 
-/* --- Footer --- */
+/* Footer */
 footer {
     text-align: center;
     padding: 20px;
@@ -1021,26 +1134,36 @@ footer {
     margin-right: 30px;
 }
 
-/* Search Box */
-.search-box {
-    display: flex;
-    border-radius: 20px;
-    overflow: hidden;
-}
-
-.search-box input {
-    padding: 10px;
-    border: none;
+/* Style for category dropdown in search box */
+.search-box select {
+    padding: 10px 15px;          
+    border-radius: 20px;            
+    border: 1px solid #ccc;        
+    background-color: #fff8f0;      
+    color: #5a3e36;                 
+    font-size: 14px;
+    font-weight: 600;
     outline: none;
-    width: 200px;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
-.search-box button {
-    background: linear-gradient(to right, #ff4b2b, #ff0000);
-    border: none;
-    color: white;
-    padding: 10px 15px;
-    cursor: pointer;
+/* Hover effect */
+.search-box select:hover {
+    border-color: #d48b8b;          
+    background-color: #fff0f5;     
+}
+
+/* Dropdown arrow customization */
+.search-box select {
+    -webkit-appearance: none;       
+    -moz-appearance: none;          
+    appearance: none;
+    background-image: url('Images/dropdown-arrow.svg'); 
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 12px;
+    padding-right: 35px;          
 }
 
 /* Dropdowns */
@@ -1057,4 +1180,184 @@ select {
     padding: 10px;
     margin: 10px;
     width: 200px;
+}
+
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+}
+
+/* Header */
+header {
+    background: #d4af37; /* gold */
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    margin: 20px auto;
+}
+
+/* Headings */
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Table styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f4c542;
+    color: black;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Status labels */
+.status {
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: white;
+}
+
+.delivered {
+    background-color: green;
+}
+
+.pending {
+    background-color: orange;
+}
+
+.cancelled {
+    background-color: red;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #222;
+    color: white;
+    margin-top: 20px;
+}
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+}
+
+/* Header */
+header {
+    background: linear-gradient(to right, #ff7a7a, #f4a261);
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+/* Container */
+.contact-container {
+    width: 85%;
+    margin: auto;
+    padding: 40px 0;
+}
+
+/* Layout */
+.contact-box {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+/* Form */
+.contact-form {
+    flex: 1;
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+.contact-form h2 {
+    margin-bottom: 15px;
+}
+
+/* Inputs */
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+/* Button */
+.contact-form button {
+    background: #e76f51;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background: #d65a3b;
+}
+
+/* Details */
+.contact-details {
+    flex: 1;
+}
+
+.contact-details p {
+    margin: 10px 0;
+}
+
+/* Social */
+.follow {
+    margin-top: 20px;
+}
+
+.social-icons a {
+    margin-right: 12px;
+    font-size: 20px;
+    color: black;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    color: #e76f51;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .contact-box {
+        flex-direction: column;
+    }
 }
